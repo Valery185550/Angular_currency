@@ -1,0 +1,4 @@
+<div class="app">
+    <app-header [currentUnit]="currentUnit"></app-header>
+    <app-content (selectedUnit)="onSelectedUnit($event)" [units]="units" [currentUnit]="currentUnit"></app-content>
+</div>

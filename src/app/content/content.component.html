@@ -1,0 +1,8 @@
+<label for="firstUnit">грн</label>
+<input type="text" id="firstUnit" (input)="onInput($event)" [(ngModel)]="firstUnit">
+
+<label for="secondUnit">{{currentUnit.cc}}</label>
+<input type="text" id="secondUnit" (input)="onInput($event)" [(ngModel)]="secondUnit">
+<select (change)="onSelected($event)">
+    <option  *ngFor="let unit of units" [value]="unit.cc" [selected]="currentUnit? unit.cc === currentUnit.cc:false" >{{unit.cc}}</option>
+</select>
